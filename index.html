@@ -51,38 +51,25 @@
             }
         });
     </script>
-    <style>
-       
-        .dark .text-white {
-            color: #1F2937 !important;
-        }
-        .dark .text-gray-400 {
-            color: #6B7280 !important;
-        }
-        .dark .text-gray-300 {
-            color: #4B5563 !important;
-        }
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
-        }
-        .tag {
-            padding: 5px 12px;
-            border-radius: 20px;
-            background-color: #f3f4f6;
-            color: #1f2937;
-            transition: all 0.3s ease;
-        }
-        .tag:hover {
-            transform: scale(1.05);
-        }
-        .dark .tag {
-            background-color: #374151;
-            color: #f9fafb;
-        }
+    <style>    
+    body {
+        background-color: white;
+        color: #1F2937;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .dark body {
+        background-color: #1F2937;
+        color: white;
+    }
+    .dark .bg-white {
+        background-color: #374151 !important;
+    }
+    .dark .text-gray-900 {
+        color: white !important;
+    }
+    .dark .text-white {
+        color: black !important;
+    }
     </style>
 </head>
 
