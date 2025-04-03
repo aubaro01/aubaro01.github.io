@@ -102,6 +102,10 @@
         </div>
     </header>
 
+      <button id="theme-toggle" class="fixed top-4 right-4 p-3 bg-gray-200 dark:bg-gray-700 rounded-full shadow-lg z-50">
+    <i id="theme-icon" class="fas fa-moon"></i>
+</button>
+
     <main class="container mx-auto px-4 sm:px-6 lg:px-8">
 
         <section id="about" class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
@@ -213,6 +217,33 @@
             <p><a href="mailto:claudiobarroso106@gmail.com" class="text-primary hover:underline transition-colors">claudiobarroso106@gmail.com</a></p>
         </div>
     </footer>
+
+<script>
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+        const html = document.documentElement;
+        const icon = document.getElementById('theme-icon');
+        html.classList.toggle('dark');
+        
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('darkMode', isDark);
+        
+        icon.classList.toggle('fa-moon', !isDark);
+        icon.classList.toggle('fa-sun', isDark);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedMode = localStorage.getItem('darkMode');
+        const html = document.documentElement;
+        const icon = document.getElementById('theme-icon');
+        
+        if (savedMode === 'true') {
+            html.classList.add('dark');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    });
+</script>
+
     <!--<script>
         // Simple dark mode toggle
         const darkModeToggle = document.createElement('button');
