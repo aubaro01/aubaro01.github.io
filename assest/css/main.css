@@ -1,0 +1,17 @@
+html {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+html.white body {
+    background-color: #FFFFFF;
+    color: #1F2937;
+}
