@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="/assest/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,15 +35,12 @@
             },
         };
 
-
         function toggleTheme() {
             const html = document.documentElement;
             html.classList.toggle('dark');
-
             const isDark = html.classList.contains('dark');
             localStorage.setItem('darkMode', isDark);
         }
-
 
         document.addEventListener('DOMContentLoaded', () => {
             const savedMode = localStorage.getItem('darkMode');
@@ -55,7 +55,7 @@
     </script>
 </head>
 
-<body class="bg-gray-900 text-white transition-colors duration-500 dark:bg-gray-100">
+<body class="bg-gray-900 text-white transition-colors duration-500 dark:bg-gray-100 dark:text-gray-900">
 
     <header class="py-6">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,6 +65,8 @@
                     <ul class="flex flex-wrap justify-center gap-4 sm:gap-6">
                         <li><a href="#about" class="hover:text-secondary transition-colors">Sobre</a></li>
                         <li><a href="#projects" class="hover:text-secondary transition-colors">Projetos</a></li>
+                        <li><a href="#techs" class="hover:text-secondary transition-colors">Techs</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -72,169 +74,220 @@
     </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8">
-
         <section id="about"
-            class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
-            <div class="max-w-4xl mx-auto px-4 text-left">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white dark:text-gray-900">Cláudio Barroso <span
-                        style="color: purple;"> :></span></h2>
-                <p class="text-base sm:text-lg mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad min
-                </p>
-                <p class="text-base sm:text-lg mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad min
+        class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 text-left">
+            <h2 data-aos="zoom-in" class="text-3xl sm:text-4xl font-bold mb-6 text-white dark:text-gray-900">
+                Cláudio Barroso <span style="color: purple;"> :></span>
+            </h2>
+    
+            <p data-aos="fade-right" data-aos-delay="100" class="text-base sm:text-lg mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+            </p>
+            <p data-aos="fade-left" data-aos-delay="200" class="text-base sm:text-lg mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+            </p>
+            <p data-aos="fade-right" data-aos-delay="300" class="text-base sm:text-lg mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+            </p>
+    
+            <a href="https://github.com/aubaro01" data-aos="flip-up" data-aos-delay="400"
+                class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-secondary hover:scale-105 transform transition-all duration-600">
+                <i class="fab fa-github mr-2"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/aubaro01" data-aos="zoom-in-up" data-aos-delay="500"
+                class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-secondary hover:scale-105 transform transition-all duration-600 ml-4">
+                <i class="fab fa-linkedin mr-2"></i> LinkedIn
+            </a>
+        </div>
+    </section>
+    
 
-                </p>
-                <p class="text-base sm:text-lg mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad min
-                </p>
-                <a href="https://github.com/aubaro01"
-                    class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-secondary hover:scale-105 transform transition-all duration-600">
-                    <i class="fab fa-github mr-2"></i> GitHub
-                </a>
-                <a href="https://github.com/aubaro01"
-                    class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors shadow-md hover:bg-secondary hover:scale-105 transform transition-all duration-600">
-                    <i class="fab fa-linkedin mr-2"></i> Linkdin
-                </a>
-            </div>
-        </section>
-
-        <section id="projects"
-            class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
-            <div class="max-w-6xl w-full">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Meus Projetos
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <!-- Projeto 1 -->
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Maclongo</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
+    <section id="projects" class="py-16 bg-gray-900 dark:bg-gray-900 transition-all">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-100 dark:text-white mb-10">Meus Projetos</h2>
+    
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+                <!-- Projeto 1 -->
+                <div class="group relative rounded-lg overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition-all transform hover:scale-105" data-aos="fade-up">
+                    <img src="./assest/img/mac.png" alt="Maclongo" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <h3 class="text-xl font-semibold">Maclongo</h3>
+                        <p class="text-sm mt-2">Design, restruturação e implementação de novas funções para um site</p>
+                        <div class="mt-3 flex flex-wrap items-center gap-2">
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">PHP</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">MYSQL</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Bootstrap CSS</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Css</span>
+                        </div>
                     </div>
-
-                    <!-- Projeto 2 -->
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">PrSocorros</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
-                    </div>
-
-                    <!-- Projeto 3 -->
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">State2State</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
-                    </div>
-
-                    <!-- Projeto 4 -->
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Pc Auto</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Ask-me</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">MyDash</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
-                    </div>
-                    <div
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
-                        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Paw-Project</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit.</p>
-
-                        <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
-                    </div>
+                    <a href="https://github.com/aubaro01/Maclongo_Projeto" class="absolute inset-0 z-10"></a>
                 </div>
+    
+                <!-- Projeto 2 -->
+                <div class="group relative rounded-lg overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition-all transform hover:scale-105" data-aos="fade-up">
+                    <img src="./assest/img/sav.png" alt="PrSocorros" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <h3 class="text-xl font-semibold">SocorrosSav</h3>
+                        <p class="text-sm mt-2">Projeto para uma atividade, que tem como objetivo dar apoio a uma formação de primeiros socorros.</p>
+                        <div class="mt-3 flex flex-wrap items-center gap-2">
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Express js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">MongoDB</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">React js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Bootstrap CSS</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Node js</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/aubaro01/SocorrosSav" class="absolute inset-0 z-10"></a>
+                </div>
+    
+                <!-- Projeto 3 -->
+                <div class="group relative rounded-lg overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition-all transform hover:scale-105" data-aos="fade-up">
+                    <img src="./assest/img/git.png" alt="State2State" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <h3 class="text-xl font-semibold">Paw_project</h3>
+                        <p class="text-sm mt-2">Uma aplicação web para psicólogos.</p>
+                        <div class="mt-3 flex flex-wrap items-center gap-2">
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Express js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">MongoDB</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Next js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Node js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Tailwind css</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/aubaro01/paw-project" class="absolute inset-0 z-10"></a>
+                </div>
+    
+                <!-- Projeto 4 -->
+                <div class="group relative rounded-lg overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition-all transform hover:scale-105" data-aos="fade-up">
+                    <img src="./assest/img/git.png" alt="Pc Auto" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <h3 class="text-xl font-semibold">Pc Auto</h3>
+                        <p class="text-sm mt-2">Sistema de agendamento para oficinas</p>
+                        <div class="mt-3 flex flex-wrap items-center gap-2">
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Python</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">tkinter</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">MySQL</span>
+                        </div>
+                    </div>
+                    <a href="#" class="absolute inset-0 z-10"></a>
+                </div>
+
+                <div class="group relative rounded-lg overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition-all transform hover:scale-105" data-aos="fade-up">
+                    <img src="./assest/img/git.png" alt="State2State" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <h3 class="text-xl font-semibold">NewState</h3>
+                        <p class="text-sm mt-2">Um blog com fotos que eu tirei <3.</p>
+                        <div class="mt-3 flex flex-wrap items-center gap-2">
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Express js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">MongoDB</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">React js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Node js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Bootstrap CSS</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/aubaro01/NewState" class="absolute inset-0 z-10"></a>
+                </div>
+    
+
+                <div class="group relative rounded-lg overflow-hidden bg-gray-800 shadow-md hover:shadow-xl transition-all transform hover:scale-105" data-aos="fade-up">
+                    <img src="./assest/img/git.png" alt="State2State" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <h3 class="text-xl font-semibold">Express Api</h3>
+                        <p class="text-sm mt-2">Uma api para blog.</p>
+                        <div class="mt-3 flex flex-wrap items-center gap-2">
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Express js</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">MongoDB</span>
+                            <span class="bg-gray-700 px-2 py-1 text-xs rounded text-white">Node js</span>
+                            
+                        </div>
+                    </div>
+                    <a href="https://github.com/aubaro01/Express_api" class="absolute inset-0 z-10"></a>
+                </div>
+    
+    
             </div>
-        </section>
-
-
+        </div>
+    </section>
+    
+        
+        
 
         <section id="techs"
-            class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-8 dark:text-white">Techs</h2>
-
-                <div class="tag-cloud flex flex-wrap gap-4 justify-center">
-                    <!-- Frontend Technologies -->
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">React</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">JavaScript</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">HTML</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">CSS</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">BootstrapCSS</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TailwindCSS</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VanillaCSS</span>
-
-                    <!-- Backend Technologies -->
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Node.js</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Express.js</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">PHP</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laravel</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Python</span>
-
-                    <!-- Databases -->
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MongoDB</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MySQL</span>
-
-                    <!-- Tools -->
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Git</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">GitHub</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VSCode</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">NetBeans</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">DBeaver</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laragon</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">XAMPP</span>
-                    <span
-                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TortoiseGit</span>
-                </div>
+        class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
+        <div class="container mx-auto px-4">
+    
+            <!-- Título animado -->
+            <h2 data-aos="zoom-in" class="text-3xl font-bold text-center mb-8 dark:text-white">Techs</h2>
+    
+            <!-- Tags animadas -->
+            <div class="tag-cloud flex flex-wrap gap-4 justify-center">
+    
+                <!-- Cada tag com animação e delay diferente -->
+                <span data-aos="zoom-in" data-aos-delay="100"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">React</span>
+    
+                <span data-aos="zoom-in" data-aos-delay="150"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">JavaScript</span>
+    
+                <span data-aos="zoom-in" data-aos-delay="200"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">HTML</span>
+    
+                <span data-aos="zoom-in" data-aos-delay="250"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">CSS</span>
+    
+                <span data-aos="zoom-in" data-aos-delay="300"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">BootstrapCSS</span>
+    
+                <span data-aos="zoom-in" data-aos-delay="350"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TailwindCSS</span>
+    
+                <span data-aos="zoom-in" data-aos-delay="400"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VanillaCSS</span>
+    
+                <!-- Backend -->
+                <span data-aos="fade-up" data-aos-delay="450"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Node.js</span>
+    
+                <span data-aos="fade-up" data-aos-delay="500"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Express.js</span>
+    
+                <span data-aos="fade-up" data-aos-delay="550"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">PHP</span>
+    
+                <span data-aos="fade-up" data-aos-delay="600"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laravel</span>
+    
+                <span data-aos="fade-up" data-aos-delay="650"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Python</span>
+    
+                <!-- Databases -->
+                <span data-aos="fade-up" data-aos-delay="700"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MongoDB</span>
+    
+                <span data-aos="fade-up" data-aos-delay="750"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MySQL</span>
+    
+                <!-- Tools -->
+                <span data-aos="fade-up" data-aos-delay="800"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Git</span>
+    
+                <span data-aos="fade-up" data-aos-delay="850"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">GitHub</span>
+    
+                <span data-aos="fade-up" data-aos-delay="900"
+                    class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VSCode</span>
             </div>
-        </section>
-
-
+        </div>
+    </section>
+    
     </main>
 
     <footer class="bg-gray-800 py-6 text-center dark:bg-gray-200 dark:text-gray-900">
@@ -246,7 +299,7 @@
                     <i class="fab fa-github text-xl"></i>
                 </a>
                 <a href="#"
-                    class="text-gray-400 hover:text-primary transition-colors dark:text-gray-600 dark:hover:text-secondary transition-colors">
+                    class="text-gray-400 hover:text-primary transition-colors dark:text-gray-600 dark:hover:text-secondary">
                     <i class="fab fa-linkedin text-xl"></i>
                 </a>
             </div>
@@ -254,49 +307,15 @@
                     class="text-primary transition-colors">claudiobarroso106@gmail.com</a></p>
         </div>
     </footer>
-    <script>
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            const html = document.documentElement;  // Aplique no elemento HTML
-            const icon = document.getElementById('theme-icon');
-            html.classList.toggle('dark');  // Alterna a classe 'dark' no HTML
-
-            const isDark = html.classList.contains('dark');  // Verifica se está no modo escuro
-            localStorage.setItem('darkMode', isDark);  // Armazena o tema selecionado no localStorage
-
-            // Muda o ícone baseado no estado do tema
-            icon.classList.toggle('fa-moon', !isDark);  // Se não estiver em modo escuro, usa o ícone de lua
-            icon.classList.toggle('fa-sun', isDark);   // Se estiver em modo escuro, usa o ícone de sol
-        });
-
-        // Restaura a configuração do tema ao carregar a página
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedMode = localStorage.getItem('darkMode');
-            const html = document.documentElement;  // Seleciona o elemento HTML
-            const icon = document.getElementById('theme-icon');
-
-            // Se o tema estiver salvo como 'true', aplica o tema escuro
-            if (savedMode === 'true') {
-                html.classList.add('dark');  // Adiciona a classe 'dark' ao HTML
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }
-        });
-    </script>
-
-    <!--<script>
-        // Simple dark mode toggle
-        const darkModeToggle = document.createElement('button');
-        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        darkModeToggle.className = 'fixed top-4 right-4 p-3 bg-gray-200 dark:bg-gray-700 rounded-full shadow-lg z-50';
-        document.body.appendChild(darkModeToggle);
-        
-        darkModeToggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            darkModeToggle.innerHTML = document.documentElement.classList.contains('dark') 
-                ? '<i class="fas fa-sun"></i>' 
-                : '<i class="fas fa-moon"></i>';
-        });
-    </script>-->
 </body>
 
+<script>
+    AOS.init({
+        duration: 1000, 
+        easing: 'ease-in-out', 
+        once: false 
+    });
+
+
+</script>
 </html>
