@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,18 @@
     <link rel="stylesheet" href="/assest/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3B82F6', 
-                        secondary: '#10B981', 
-                        dark: '#1F2937', 
-                        light: '#F9FAFB', 
-                        accent: '#9F7AEA', 
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                        accent: '#9F7AEA',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -31,20 +32,20 @@
             },
         };
 
-       
+
         function toggleTheme() {
             const html = document.documentElement;
             html.classList.toggle('dark');
-          
+
             const isDark = html.classList.contains('dark');
             localStorage.setItem('darkMode', isDark);
         }
 
-        
+
         document.addEventListener('DOMContentLoaded', () => {
             const savedMode = localStorage.getItem('darkMode');
             const html = document.documentElement;
-            
+
             if (savedMode === 'true') {
                 html.classList.add('dark');
             } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -72,123 +73,167 @@
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-        <section id="about" class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
+        <section id="about"
+            class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
             <div class="max-w-4xl mx-auto px-4 text-left">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white dark:text-gray-900">Cláudio Barroso <span style="color: purple;"> :></span></h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white dark:text-gray-900">Cláudio Barroso <span
+                        style="color: purple;"> :></span></h2>
                 <p class="text-base sm:text-lg mb-6">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min              
-                  </p>
-                <p class="text-base sm:text-lg mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min           
-            
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad min
                 </p>
                 <p class="text-base sm:text-lg mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad min
+
                 </p>
-                <a href="https://github.com/aubaro01" 
-                   class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-secondary hover:scale-105 transform transition-all duration-600">
-                   <i class="fab fa-github mr-2"></i> GitHub
+                <p class="text-base sm:text-lg mb-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad min
+                </p>
+                <a href="https://github.com/aubaro01"
+                    class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-secondary hover:scale-105 transform transition-all duration-600">
+                    <i class="fab fa-github mr-2"></i> GitHub
                 </a>
-                <a href="https://github.com/aubaro01" 
-                   class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors shadow-md hover:bg-secondary hover:scale-105 transform transition-all duration-600">
-                   <i class="fab fa-linkedin mr-2"></i> Linkdin
+                <a href="https://github.com/aubaro01"
+                    class="inline-block px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors shadow-md hover:bg-secondary hover:scale-105 transform transition-all duration-600">
+                    <i class="fab fa-linkedin mr-2"></i> Linkdin
                 </a>
             </div>
         </section>
 
-        <section id="projects" class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
+        <section id="projects"
+            class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
             <div class="max-w-6xl w-full">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Meus Projetos</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Meus Projetos
+                </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <!-- Projeto 1 -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Maclongo</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
-        
+
                     <!-- Projeto 2 -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">PrSocorros</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
-        
+
                     <!-- Projeto 3 -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">State2State</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
-        
+
                     <!-- Projeto 4 -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Pc Auto</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Ask-me</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
 
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">MyDash</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
+                    <div
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow dark:bg-white dark:text-gray-900">
                         <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">Paw-Project</h3>
-                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        
+                        <p class="text-sm text-gray-400 mb-4 dark:text-gray-600">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+
                         <a href="#" class="text-white hover:underline transition-colors">Saiba mais</a>
                     </div>
                 </div>
             </div>
         </section>
-        
 
 
-        <section id="techs" class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
+
+        <section id="techs"
+            class="min-h-screen flex items-center justify-center py-16 dark:bg-gray-100 dark:text-gray-900">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-8 dark:text-white">Techs</h2>
-                
+
                 <div class="tag-cloud flex flex-wrap gap-4 justify-center">
                     <!-- Frontend Technologies -->
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">React</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">JavaScript</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">HTML</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">CSS</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">BootstrapCSS</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TailwindCSS</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VanillaCSS</span>
-                    
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">React</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">JavaScript</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">HTML</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">CSS</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">BootstrapCSS</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TailwindCSS</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VanillaCSS</span>
+
                     <!-- Backend Technologies -->
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Node.js</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Express.js</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">PHP</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laravel</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Python</span>
-                    
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Node.js</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Express.js</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">PHP</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laravel</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Python</span>
+
                     <!-- Databases -->
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MongoDB</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MySQL</span>
-        
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MongoDB</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">MySQL</span>
+
                     <!-- Tools -->
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Git</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">GitHub</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VSCode</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">NetBeans</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">DBeaver</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laragon</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">XAMPP</span>
-                    <span class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TortoiseGit</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Git</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">GitHub</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">VSCode</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">NetBeans</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">DBeaver</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">Laragon</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">XAMPP</span>
+                    <span
+                        class="tag text-sm bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-secondary hover:scale-105 transform transition-all duration-300">TortoiseGit</span>
                 </div>
             </div>
         </section>
-        
+
 
     </main>
 
@@ -196,44 +241,47 @@
         <div class="container mx-auto px-4">
             <p class="mb-2">&copy; Cláudio Barroso</p>
             <div class="flex justify-center space-x-4 mb-4">
-                <a href="https://github.com/aubaro01" target="_blank" class="text-gray-400 hover:text-primary transition-colors dark:text-gray-600 dark:hover:text-secondary">
+                <a href="https://github.com/aubaro01" target="_blank"
+                    class="text-gray-400 hover:text-primary transition-colors dark:text-gray-600 dark:hover:text-secondary">
                     <i class="fab fa-github text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-primary transition-colors dark:text-gray-600 dark:hover:text-secondary transition-colors">
+                <a href="#"
+                    class="text-gray-400 hover:text-primary transition-colors dark:text-gray-600 dark:hover:text-secondary transition-colors">
                     <i class="fab fa-linkedin text-xl"></i>
                 </a>
             </div>
-            <p><a href="mailto:claudiobarroso106@gmail.com" class="text-primary transition-colors">claudiobarroso106@gmail.com</a></p>
+            <p><a href="mailto:claudiobarroso106@gmail.com"
+                    class="text-primary transition-colors">claudiobarroso106@gmail.com</a></p>
         </div>
     </footer>
-<script>
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-        const html = document.documentElement;  // Aplique no elemento HTML
-        const icon = document.getElementById('theme-icon');
-        html.classList.toggle('dark');  // Alterna a classe 'dark' no HTML
-        
-        const isDark = html.classList.contains('dark');  // Verifica se está no modo escuro
-        localStorage.setItem('darkMode', isDark);  // Armazena o tema selecionado no localStorage
-        
-        // Muda o ícone baseado no estado do tema
-        icon.classList.toggle('fa-moon', !isDark);  // Se não estiver em modo escuro, usa o ícone de lua
-        icon.classList.toggle('fa-sun', isDark);   // Se estiver em modo escuro, usa o ícone de sol
-    });
-    
-    // Restaura a configuração do tema ao carregar a página
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedMode = localStorage.getItem('darkMode');
-        const html = document.documentElement;  // Seleciona o elemento HTML
-        const icon = document.getElementById('theme-icon');
-        
-        // Se o tema estiver salvo como 'true', aplica o tema escuro
-        if (savedMode === 'true') {
-            html.classList.add('dark');  // Adiciona a classe 'dark' ao HTML
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
-    });
-</script>    
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const html = document.documentElement;  // Aplique no elemento HTML
+            const icon = document.getElementById('theme-icon');
+            html.classList.toggle('dark');  // Alterna a classe 'dark' no HTML
+
+            const isDark = html.classList.contains('dark');  // Verifica se está no modo escuro
+            localStorage.setItem('darkMode', isDark);  // Armazena o tema selecionado no localStorage
+
+            // Muda o ícone baseado no estado do tema
+            icon.classList.toggle('fa-moon', !isDark);  // Se não estiver em modo escuro, usa o ícone de lua
+            icon.classList.toggle('fa-sun', isDark);   // Se estiver em modo escuro, usa o ícone de sol
+        });
+
+        // Restaura a configuração do tema ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('darkMode');
+            const html = document.documentElement;  // Seleciona o elemento HTML
+            const icon = document.getElementById('theme-icon');
+
+            // Se o tema estiver salvo como 'true', aplica o tema escuro
+            if (savedMode === 'true') {
+                html.classList.add('dark');  // Adiciona a classe 'dark' ao HTML
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    </script>
 
     <!--<script>
         // Simple dark mode toggle
@@ -250,4 +298,5 @@
         });
     </script>-->
 </body>
+
 </html>
